@@ -1,60 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Layout 1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid Layout</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <main class="page">
-    <section class="box one">
-      das das dadas das das das das d<br>
-      sadas das das ds das das das da<br>
-      das dadas das das dadad
-    </section>
-
-    <section class="box two">
-      ds adadas ds add<br>
-      ads das d<br>
-      das ds ds as das d<br>
-      das das ddas dddddad
-    </section>
-
-    <section class="box three">
-      das das dadas das das das das d<br>
-      sadas das das ds das das das da<br>
-      das dadas das das dadad
-    </section>
-
-    <section class="box large">
-      <p>
-        das das dadas das das das das d<br>
-        sadas das das ds das das das da<br>
-        das dadas das das dadad
-      </p>
-      <p>
-        das das dadas das das das das d<br>
-        sadas das das ds das das das da<br>
-        das dadas das das dadad
-      </p>
-      <p>
-        das das dadas das das das das d<br>
-        sadas das das ds das das das da<br>
-        das dadas das das dadad
-      </p>
-    </section>
-
-    <div class="hex-border"></div>
-    <div class="hexagon"></div>
-
-    <div class="lines">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
+    <div class="content-column">
+      <section class="box" id="box-one">
+        <p>das das dadas das das das das d sadas das das ds das das das da das dadas das das dadad</p>
+      </section>
+      <section class="box" id="box-two">
+        <p>ds adadas ds add ads das d das ds ds as das d das das ddas dddddad</p>
+      </section>
+      <section class="box" id="box-three">
+        <p>das das dadas das das das das d sadas das das ds das das das da das dadas das das dadad</p>
+      </section>
+      <section class="box box-large" id="box-large">
+        <p>das das dadas das das das das d sadas das das ds das das das da das dadas das das dadad</p>
+        <p>das das dadas das das das das d sadas das das ds das das das da das dadas das das dadad</p>
+        <p>das das dadas das das das das d sadas das das ds das das das da das dadas das das dadad</p>
+      </section>
     </div>
+
+    <aside class="art-column" aria-label="Decorative shapes">
+      <div class="hexagon" aria-hidden="true"></div>
+      <div class="lines" aria-hidden="true">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </aside>
   </main>
 </body>
 </html>
