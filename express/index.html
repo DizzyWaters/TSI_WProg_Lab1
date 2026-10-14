@@ -3,40 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Grid Layout</title>
+  <meta name="description" content="A creative studio landing page built with responsive CSS Grid.">
+  <title>Forma — Creative Studio</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
-  <main class="page">
-    <div class="content-column">
-      <section class="box" id="box-one">
-        <p>das das dadas das das das das d sadas das das ds das das das da das dadas das das dadad</p>
-      </section>
-      <section class="box" id="box-two">
-        <p>ds adadas ds add ads das d das ds ds as das d das das ddas dddddad</p>
-      </section>
-      <section class="box" id="box-three">
-        <p>das das dadas das das das das d sadas das das ds das das das da das dadas das das dadad</p>
-      </section>
-      <section class="box box-large" id="box-large">
-        <p>das das dadas das das das das d sadas das das ds das das das da das dadas das das dadad</p>
-        <p>das das dadas das das das das d sadas das das ds das das das da das dadas das das dadad</p>
-        <p>das das dadas das das das das d sadas das das ds das das das da das dadas das das dadad</p>
-      </section>
-    </div>
+  <div class="site-shell" id="top">
+    <header class="site-header">
+      <a href="#top" class="brand" aria-label="Forma home"><span class="brand-symbol">⬡</span> FORMA<span class="brand-dot">.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="header-link">Let's talk <span aria-hidden="true">↗</span></a>
+    </header>
 
-    <aside class="art-column" aria-label="Decorative shapes">
-      <div class="hexagon" aria-hidden="true"></div>
-      <div class="lines" aria-hidden="true">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </div>
-    </aside>
-  </main>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> INDEPENDENT CREATIVE STUDIO</div>
+          <h1 id="hero-title">Ideas with<br><em>character.</em></h1>
+          <p class="hero-description">We turn bold ideas into memorable digital experiences. Thoughtful design, simple solutions, and a little personality.</p>
+          <a class="primary-button" href="#work">Explore our work <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-art" aria-label="Abstract geometric illustration" role="img">
+          <div class="art-label">FORM FOLLOWS FEELING / 001</div>
+          <div class="hexagon-border"><div class="hexagon-fill"></div></div>
+          <div class="art-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          <span class="art-caption">MADE TO STAND OUT.</span>
+        </div>
+      </section>
+
+      <section class="about section-spacing" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <span class="section-index">01 / WHO WE ARE</span>
+          <h2 id="about-title">Small studio.<br>Big thinking.</h2>
+        </div>
+        <div class="about-copy">
+          <p>We believe great design doesn't need to be complicated. It needs to be clear, useful, and unmistakably yours.</p>
+          <p>From a first sketch to the final pixel, we bring curiosity and care to every project.</p>
+        </div>
+      </section>
+
+      <section class="work section-spacing" id="work" aria-labelledby="work-title">
+        <div class="section-topline"><span class="section-index">02 / WHAT WE DO</span><span>SELECTED SERVICES ↓</span></div>
+        <h2 id="work-title">What we can create.</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <div class="service-icon icon-window" aria-hidden="true"><span></span><span></span><span></span></div>
+            <h3>Web design</h3>
+            <p>Distinctive, easy-to-use websites that feel great on every screen.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <div class="service-icon icon-circles" aria-hidden="true"><span></span><span></span></div>
+            <h3>Visual identity</h3>
+            <p>Memorable visual systems with the flexibility to grow.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <div class="service-icon icon-grid" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <h3>Digital experiences</h3>
+            <p>Engaging interfaces that connect creativity with functionality.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section-spacing" id="contact" aria-labelledby="contact-title">
+        <div><span class="section-index">03 / GET IN TOUCH</span><h2 id="contact-title">Have an idea?<br><em>Let's make it real.</em></h2></div>
+        <a class="primary-button contact-button" href="mailto:hello@example.com?subject=Project%20inquiry">Say hello <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© 2026 FORMA STUDIO</span><span>BUILT WITH HTML + CSS GRID</span><a href="#top">BACK TO TOP ↑</a></footer>
+  </div>
 </body>
 </html>
-
