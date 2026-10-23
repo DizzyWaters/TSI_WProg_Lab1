@@ -85,10 +85,10 @@ a:focus-visible {
 }
 
 .brand-symbol {
-    font-size: 35px;
-    line-height: 0;
+    display: block;
+    width: 35px;
+    height: 35px;
     margin-right: 8px;
-    font-weight: 400;
 }
 
 .brand-dot {
@@ -217,52 +217,20 @@ h1 em, .contact h2 em {
     letter-spacing: .11em;
 }
 
-.hexagon-border {
+/* Graphic files live in /assets, not as HTML shapes. */
+.hero-shape {
+    display: block;
     width: min(55%, 290px);
-    aspect-ratio: 1;
-    display: grid;
-    place-items: center;
-    background: var(--ink);
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    height: auto;
     transform: translateY(-30px) rotate(-12deg);
-}
-
-.hexagon-fill {
-    width: 97%;
-    height: 97%;
-    background: var(--cream);
-    clip-path: inherit;
 }
 
 .art-lines {
     position: absolute;
     width: 38%;
+    height: auto;
     left: 12%;
     bottom: 15%;
-    display: grid;
-    gap: 10px;
-}
-
-.art-lines span {
-    height: 3px;
-    width: 100%;
-    background: var(--ink);
-}
-
-.art-lines span:nth-child(2) {
-    width: 88%;
-}
-
-.art-lines span:nth-child(3) {
-    width: 94%;
-}
-
-.art-lines span:nth-child(4) {
-    width: 76%;
-}
-
-.art-lines span:nth-child(5) {
-    width: 83%;
 }
 
 .art-caption {
@@ -349,60 +317,10 @@ h2 {
 }
 
 .service-icon {
+    display: block;
     width: 80px;
     height: 80px;
     margin: 35px 0 24px;
-}
-
-.icon-window {
-    border: 3px solid var(--ink);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 14px 1fr;
-    gap: 7px;
-    padding: 7px;
-}
-
-.icon-window span:first-child {
-    grid-column: 1 / -1;
-    border-bottom: 3px solid var(--ink);
-}
-
-.icon-window span:not(:first-child) {
-    background: var(--purple);
-    border: 2px solid var(--ink);
-}
-
-.icon-circles {
-    position: relative;
-}
-
-.icon-circles span {
-    position: absolute;
-    width: 55px;
-    height: 55px;
-    border: 3px solid var(--ink);
-    border-radius: 50%;
-}
-
-.icon-circles span:last-child {
-    left: 25px;
-    top: 18px;
-    background: var(--purple);
-}
-
-.icon-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
-}
-
-.icon-grid span {
-    border: 3px solid var(--ink);
-}
-
-.icon-grid span:nth-child(2) {
-    background: var(--purple);
 }
 
 .service-card h3 {
@@ -541,4 +459,3 @@ h2 {
         transition: none;
     }
 }
-
