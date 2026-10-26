@@ -37,6 +37,8 @@
                 <a href="#contact">Contact</a>
             </nav>
 
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+
             <a class="header-link" href="#contact">
                 Let's talk <span aria-hidden="true">↗</span>
             </a>
@@ -68,7 +70,7 @@
                     </a>
                 </div>
 
-                <div class="hero-art" aria-label="Abstract geometric illustration" role="img">
+                <div class="hero-art" aria-label="Abstract geometric illustration">
                     <div class="art-label">FORM FOLLOWS FEELING / 001</div>
 
                     <img
@@ -83,6 +85,7 @@
                         alt=""
                     >
 
+                    <button class="spin-button" id="spin-button" type="button">Rotate shape ↻</button>
                     <span class="art-caption">MADE TO STAND OUT.</span>
                 </div>
             </section>
@@ -120,9 +123,12 @@
 
                 <h2 id="work-title">What we can create.</h2>
 
+                <p class="interaction-hint">Click a card to select a service.</p>
+                <p class="selection-status" id="selection-status" role="status" aria-live="polite">No service selected.</p>
+
                 <div class="services-grid">
                     <!-- Service 1 -->
-                    <article class="service-card">
+                    <article class="service-card" tabindex="0" role="button" aria-pressed="false">
                         <span class="service-number">01</span>
 
                         <img
@@ -138,7 +144,7 @@
                     </article>
 
                     <!-- Service 2 -->
-                    <article class="service-card">
+                    <article class="service-card" tabindex="0" role="button" aria-pressed="false">
                         <span class="service-number">02</span>
 
                         <img
@@ -154,7 +160,7 @@
                     </article>
 
                     <!-- Service 3 -->
-                    <article class="service-card">
+                    <article class="service-card" tabindex="0" role="button" aria-pressed="false">
                         <span class="service-number">03</span>
 
                         <img
@@ -195,7 +201,7 @@
         <!-- FOOTER: copyright and back-to-top link -->
         <footer class="site-footer">
             <span>© 2026 FORMA STUDIO</span>
-            <span>BUILT WITH HTML + CSS GRID</span>
+            <span>BUILT WITH HTML + CSS GRID + JAVASCRIPT</span>
             <a href="#top">BACK TO TOP ↑</a>
         </footer>
 

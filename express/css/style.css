@@ -459,3 +459,102 @@ h2 {
         transition: none;
     }
 }
+
+/* -----------------------------------------------------------------
+ * 11. JavaScript interaction states and animation
+ * ----------------------------------------------------------------- */
+
+/* Interactive elements share a visible focus style for keyboard users. */
+.theme-toggle,
+.spin-button {
+    cursor: pointer;
+    border: 2px solid var(--ink);
+    background: var(--cream);
+    color: var(--ink);
+    padding: 10px 14px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.theme-toggle:focus-visible,
+.spin-button:focus-visible,
+.service-card:focus-visible {
+    outline: 3px solid #795db8;
+    outline-offset: 4px;
+}
+
+.spin-button {
+    position: absolute;
+    right: 28px;
+    top: 64px;
+    z-index: 1;
+}
+
+.interaction-hint {
+    margin-bottom: 4px;
+}
+
+.selection-status {
+    min-height: 1.5em;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.service-card {
+    cursor: pointer;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.service-card.is-selected {
+    box-shadow: 8px 8px 0 var(--ink);
+    transform: translate(-4px, -4px);
+    outline: 3px solid #795db8;
+}
+
+/* CSS animation: gentle floating movement of the hero SVG. */
+.hero-shape {
+    animation: float-shape 3.5s ease-in-out infinite alternate;
+    transition: filter 250ms ease;
+}
+
+/* JS adds this class when the rotation button is clicked. */
+.hero-shape.is-rotated {
+    animation: float-shape-rotated 3.5s ease-in-out infinite alternate;
+    filter: drop-shadow(9px 9px 0 rgba(24, 23, 27, 0.18));
+}
+
+@keyframes float-shape {
+    from { transform: translateY(-38px) rotate(-12deg); }
+    to { transform: translateY(-18px) rotate(-12deg); }
+}
+
+@keyframes float-shape-rotated {
+    from { transform: translateY(-38px) rotate(48deg); }
+    to { transform: translateY(-18px) rotate(48deg); }
+}
+
+/* JS changes the theme by toggling a class on the body. */
+body.dark-theme {
+    --paper: #211c2a;
+    --ink: #f7e8ad;
+    --muted: #e0d8e9;
+    --purple: #443455;
+    --cream: #3a3044;
+}
+
+/* Keep UI text legible against the dark theme's button background. */
+body.dark-theme .primary-button {
+    color: #211c2a;
+}
+
+body.dark-theme .primary-button:hover {
+    color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-shape,
+    .hero-shape.is-rotated {
+        animation: none;
+    }
+}
